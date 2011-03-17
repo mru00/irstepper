@@ -129,7 +129,7 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x3a6
+.text           0x00000000      0x4d4
  *(.vectors)
  .vectors       0x00000000       0x26 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr4/crtm8.o
                 0x00000000                __vectors
@@ -204,36 +204,36 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a
                 0x00000072                __vector_10
                 0x00000072                __vector_16
                 0x00000072                __vector_18
- .text          0x00000074      0x1a8 main.o
-                0x00000190                main
-                0x000000ec                __vector_9
- .text          0x0000021c      0x17a uart.o
-                0x00000270                __vector_12
-                0x00000336                uart_puts
-                0x0000021c                __vector_11
-                0x00000364                uart_puts_p
-                0x000002ba                uart_init
-                0x000002d8                uart_getc
-                0x00000312                uart_putc
- .text          0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
- .text          0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_copy_data.o)
- .text          0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_clear_bss.o)
- .text          0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_ctors.o)
- .text          0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_tablejump.o)
-                0x00000396                . = ALIGN (0x2)
+ .text          0x00000074      0x2d6 main.o
+                0x000001b2                main
+                0x0000011c                __vector_9
+ .text          0x0000034a      0x17a uart.o
+                0x0000039e                __vector_12
+                0x00000464                uart_puts
+                0x0000034a                __vector_11
+                0x00000492                uart_puts_p
+                0x000003e8                uart_init
+                0x00000406                uart_getc
+                0x00000440                uart_putc
+ .text          0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
+ .text          0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_copy_data.o)
+ .text          0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_clear_bss.o)
+ .text          0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_ctors.o)
+ .text          0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_tablejump.o)
+                0x000004c4                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
- .text.libgcc   0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_copy_data.o)
- .text.libgcc   0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_clear_bss.o)
- .text.libgcc   0x00000396        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_ctors.o)
- .text.libgcc   0x00000396        0xc /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_tablejump.o)
-                0x0000039a                __tablejump__
-                0x00000396                __tablejump2__
-                0x000003a2                . = ALIGN (0x2)
+ .text.libgcc   0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
+ .text.libgcc   0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc   0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000004c4        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_ctors.o)
+ .text.libgcc   0x000004c4        0xc /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_tablejump.o)
+                0x000004c8                __tablejump__
+                0x000004c4                __tablejump2__
+                0x000004d0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000003a2        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
-                0x000003a2                exit
-                0x000003a2                _exit
+ .fini9         0x000004d0        0x0 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
+                0x000004d0                exit
+                0x000004d0                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -252,11 +252,11 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000003a2        0x4 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
+ .fini0         0x000004d0        0x4 /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a(_exit.o)
  *(.fini0)
-                0x000003a6                _etext = .
+                0x000004d4                _etext = .
 
-.data           0x00800060        0x0 load address 0x000003a6
+.data           0x00800060        0x0 load address 0x000004d4
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr4/crtm8.o
@@ -275,7 +275,7 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a
                 0x00800060                _edata = .
                 0x00800060                PROVIDE (__data_end, .)
 
-.bss            0x00800060       0x4b load address 0x000003a6
+.bss            0x00800060       0x4b load address 0x000004d4
                 0x00800060                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800060        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr4/crtm8.o
@@ -294,8 +294,8 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr4/libgcc.a
                 0x008000a8                rc5_tmp
                 0x008000aa                rc5_bit
                 0x008000ab                PROVIDE (__bss_end, .)
-                0x000003a6                __data_load_start = LOADADDR (.data)
-                0x000003a6                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000004d4                __data_load_start = LOADADDR (.data)
+                0x000004d4                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008000ab        0x0
                 0x008000ab                PROVIDE (__noinit_start, .)

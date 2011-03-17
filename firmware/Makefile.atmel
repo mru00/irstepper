@@ -335,6 +335,15 @@ set_fuses: $(TARGET).hex $(TARGET).eep
 #	echo $(UISP) $(UISP_FLAGS) --wr_fuse_e=0xff
 
 
+
+set_fuses_12mhz_xtal: $(TARGET).hex $(TARGET).eep
+	$(UISP) $(UISP_FLAGS) --wr_fuse_l=0xef
+	$(UISP) $(UISP_FLAGS) --wr_fuse_h=0xc9
+#	echo $(UISP) $(UISP_FLAGS) --wr_fuse_e=0xff
+
+read_fuses:
+	$(UISP) $(UISP_FLAGS) --rd_fuses	
+
 # Program the device.  
 program: $(TARGET).hex $(TARGET).eep sizeafter
 	if [ ! -w /dev/parport0 ]; then sudo chmod uog+rw /dev/parport0; fi

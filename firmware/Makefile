@@ -20,7 +20,7 @@
 ########################################################################
 
 
-F_OSC = 11059201L
+#F_OSC = 11059201L
 #F_OSC = 12288000L
 MCU = atmega8
 MCU_DUDE = m8
@@ -74,8 +74,26 @@ release: check_branch find_dummy build sizeafter
 	@echo "Released as $(RELEASE_FILENAME)"
 	@echo
 
-FUSE_L = 0xef
-FUSE_H = 0xc9
+
+# for external, 12MHz XTAL:
+#FUSE_L = 0xef  # ... 11101111
+#FUSE_H = 0xc9  # ... 11001001
+#F_OSC = 11059201L
+
+
+# for internal, calibrated 1MHz
+#FUSE_L = 0xe1   # 11100001
+#FUSE_H = 0xd9   # 11011001
+#F_OSC = 1e6
+
+
+
+# for internal, calibrated 8MHz
+FUSE_L = 0xe4   # 11100100
+FUSE_H = 0xd9   # 11011001
+F_OSC = 8e6
+
+
 
 
 #CFLAGS += -Werror
